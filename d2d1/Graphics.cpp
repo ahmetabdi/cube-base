@@ -285,13 +285,6 @@ void Graphics::Render() {
 			//DrawBar(ScreenHeadPosition.x, ScreenFootPosition.y, PlayerList[i].Health, bounding_width);
 
 			DrawVerticalBar(ScreenHeadPosition, ScreenFootPosition, PlayerList[i].Health);
-			
-			if (GetAsyncKeyState(0x4D) & 1) {
-
-				float MoveDataX = width / 2 - ScreenHeadPosition.x, MoveDataY = height / 2 - ScreenHeadPosition.y;
-				mouse_event(MOUSEEVENTF_MOVE, (DWORD)(-MoveDataX), (DWORD)(-MoveDataY), 0, 0);
-	
-			}
 
 			//CornerBoxOutline(ScreenHeadPosition.x - (bounding_width / 2), ScreenHeadPosition.y, bounding_width, bounding_height, 2, D2D1::ColorF(1.f, 0.f, 0.f, 1.f));
 			DrawRect(ScreenHeadPosition.x - (bounding_width / 2), ScreenHeadPosition.y, bounding_width, bounding_height, D2D1::ColorF(1.f, 0.f, 0.f, 1.f));
